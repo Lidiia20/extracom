@@ -49,8 +49,8 @@ class AssetDataController extends GetxController {
         // Debug logs using logger
         logger.i('Assets loaded: ${assets.length}');
         if (assets.isNotEmpty) {
-          logger.d('Sample asset data: ${assets.first.toJson().keys.toList()}');
-          logger.d('Sample asset values: ${assets.first.toJson()}');
+          logger.d('Sample asset data: ${assets.first.toJsonForInsert().keys.toList()}');
+          logger.d('Sample asset values: ${assets.first.toJsonForInsert()}');
         } else {
           logger.w('No assets loaded from database');
         }

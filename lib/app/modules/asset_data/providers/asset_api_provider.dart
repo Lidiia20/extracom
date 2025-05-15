@@ -104,39 +104,43 @@ class AssetApiProvider extends GetxService {
   
   // Add new asset
   Future<Map<String, dynamic>> addAsset(Map<String, dynamic> assetData) async {
-    try {
-      logger.i('Adding new asset: ${assetData['namaBarang'] ?? assetData['nama_barang'] ?? 'Unknown'}');
-      
-      // Standardize field names if needed (camelCase to snake_case)
-      final standardizedData = _standardizeFieldNames(assetData);
-      
-      final response = await supabase
-          .from('aset')
-          .insert(standardizedData)
-          .select();
-      
-      if (response == null || response.isEmpty) {
-        logger.e('Failed to add asset');
-        return {
-          'status': 'error',
-          'message': 'Gagal menambahkan aset',
-        };
-      }
-      
-      logger.i('Asset added successfully with ID: ${response[0]['id']}');
-      return {
-        'status': 'success',
-        'asset': response[0],
-        'assetId': response[0]['id'],
-      };
-    } catch (e) {
-      logger.e('Exception adding asset: $e');
+  try {
+    logger.i('Adding new asset: ${assetData['namaBarang'] ?? assetData['nama_barang'] ?? 'Unknown'}');
+    
+    // Standardisasi nama field ke snake_case
+    final standardizedData = _standardizeFieldNames(assetData);
+    
+    // Hapus id karena Supabase akan auto-generate UUID
+    standardizedData.remove('id');
+    
+    final response = await supabase
+        .from('aset') // pastikan nama tabel sesuai
+        .insert(standardizedData)
+        .select(); // pakai select() untuk mendapatkan data yang dimasukkan
+
+    if (response == null || response.isEmpty) {
+      logger.e('Failed to add asset');
       return {
         'status': 'error',
-        'message': 'Exception: $e',
+        'message': 'Gagal menambahkan aset',
       };
     }
+    
+    logger.i('Asset added successfully with ID: ${response[0]['id']}');
+    return {
+      'status': 'success',
+      
+      'asset': response[0],
+      'assetId': response[0]['id'],
+    };
+  } catch (e) {
+    logger.e('Exception adding asset: $e');
+    return {
+      'status': 'error',
+      'message': 'Exception: $e',
+    };
   }
+}
   
   // Update existing asset with id and data
   Future<Map<String, dynamic>> updateAssetById(int id, Map<String, dynamic> assetData) async {

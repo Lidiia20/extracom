@@ -248,6 +248,18 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "hive",
+      "rootUri": "file:///C:/Users/Lidia/AppData/Local/Pub/Cache/hosted/pub.dev/hive-2.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "hive_flutter",
+      "rootUri": "file:///C:/Users/Lidia/AppData/Local/Pub/Cache/hosted/pub.dev/hive_flutter-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http",
       "rootUri": "file:///C:/Users/Lidia/AppData/Local/Pub/Cache/hosted/pub.dev/http-1.4.0",
       "packageUri": "lib/",
@@ -872,7 +884,7 @@
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-05-07T11:58:30.338882Z",
+  "generated": "2025-05-15T15:27:22.866676Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///C:/flutter",

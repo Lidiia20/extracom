@@ -132,7 +132,7 @@ Future<Asset?> getAssetById(String id) async {
     errorMessage.value = '';
     try {
       print('Updating asset: ${asset.namaBarang} (${asset.no})');
-      final response = await _apiProvider.updateAsset(asset.toJson());
+      final response = await _apiProvider.updateAsset(asset.toJsonForInsert());
       if (response['status'] == 'success') {
         print('Asset updated successfully');
         int index = assets.indexWhere((item) => item.no == asset.no);
@@ -214,7 +214,7 @@ Future<bool> addAsset(Asset asset) async {
   errorMessage.value = '';
   try {
     print('Adding new asset: ${asset.namaBarang}');
-    final response = await _apiProvider.addAsset(asset.toJson());
+    final response = await _apiProvider.addAsset(asset.toJsonForInsert());
     if (response['status'] == 'success') {
       print('Asset added successfully');
       await fetchAssets(); // Ambil ulang daftar aset

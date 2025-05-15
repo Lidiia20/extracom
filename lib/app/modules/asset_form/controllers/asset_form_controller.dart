@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
+import 'package:qr_flutter/qr_flutter.dart';
 
 import '../../asset_data/models/asset_model.dart';
 import '../../asset_data/models/asset_history_model.dart';
@@ -357,7 +358,9 @@ class AssetFormController extends GetxController {
   
   Asset getAssetFromForm() {
     // Create Asset object from form data
+    
     return Asset(
+      
       // If edit mode, use existing no and id
       no: isEditing.value ? assetToEdit.value?.no : null,
       id: isEditing.value ? assetToEdit.value?.id : null,

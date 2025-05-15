@@ -144,10 +144,10 @@ class Asset {
     }
   }
 
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic> toJsonForInsert() {
     return {
       'no_barang': no,
-      'id': id,
+      // 'id': id,
       'nama_barang': namaBarang,
       'merk': merk,
       'type': type,
@@ -164,8 +164,8 @@ class Asset {
       'kondisi': kondisi,
       'kategori': kategori,
       'qr_code_path': qrCodePath,
-      'created_at': createdAt?.toIso8601String(),
-      'updated_at': updatedAt?.toIso8601String(),
+      // 'created_at': createdAt?.toIso8601String(),
+      // 'updated_at': updatedAt?.toIso8601String(),
     };
   }
 

@@ -78,6 +78,7 @@ class QrGalleryController extends GetxController {
     // Check if path exists, if not, try to download from Supabase
     if (!File(qrPath).existsSync() && qrPath.startsWith('http')) {
       // Show downloading dialog
+      
       Get.dialog(
         const Center(
           child: CircularProgressIndicator(),

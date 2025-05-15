@@ -42,7 +42,7 @@ abstract class _Paths {
   static const CONDITION = '/condition';
   static const ASSET_HISTORY = '/asset-history';
   static const QR_SCANNER = '/qr-scanner';
-  static const QR_GALLERY = '/qr-gallery';
+  static const QR_GALLERY = '/qr_gallery';
   static const ASSET_REPORT = '/asset_report';
   static const ASSET_REPORT_FULL_LIST = '/asset_report_full_list';
 }
