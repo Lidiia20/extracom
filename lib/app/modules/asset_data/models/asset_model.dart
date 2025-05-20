@@ -147,7 +147,7 @@ class Asset {
   Map<String, dynamic> toJsonForInsert() {
     return {
       'no_barang': no,
-      // 'id': id,
+      'id': id,
       'nama_barang': namaBarang,
       'merk': merk,
       'type': type,

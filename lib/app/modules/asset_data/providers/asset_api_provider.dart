@@ -186,13 +186,13 @@ class AssetApiProvider extends GetxService {
     try {
       // Pastikan ada id asset dalam data
       final assetId = assetData['id'];
-      if (assetId == null) {
-        logger.e('Asset ID tidak ditemukan dalam data');
-        return {
-          'status': 'error',
-          'message': 'Asset ID tidak ditemukan dalam data',
-        };
-      }
+      // if (assetId == null) {
+      //   logger.e('Asset ID tidak ditemukan dalam data');
+      //   return {
+      //     'status': 'error',
+      //     'message': 'Asset ID tidak ditemukan dalam data',
+      //   };
+      // }
       
       logger.i('Updating asset with ID: $assetId');
       

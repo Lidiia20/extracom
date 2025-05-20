@@ -158,15 +158,15 @@ class HomeView extends GetView<HomeController> {
                       ),
                       
                       // 3. Scan QR Code - Updated untuk menggunakan route QR Scanner
-                      _buildMenuItem(
-                        icon: Icons.qr_code_scanner,
-                        title: 'Scan QR Code',
-                        color: const Color(0xFF12B1B9),
-                        onTap: () {
-                          // Navigasi ke halaman QR scanner
-                          Get.toNamed('/qr-scanner');
-                        },
-                      ),
+                      // _buildMenuItem(
+                      //   icon: Icons.qr_code_scanner,
+                      //   title: 'Scan QR Code',
+                      //   color: const Color(0xFF12B1B9),
+                      //   onTap: () {
+                      //     // Navigasi ke halaman QR scanner
+                      //     Get.toNamed('/qr-scanner');
+                      //   },
+                      // ),
                       
                       // 4. Kategori Aset
                       _buildMenuItem(
@@ -214,9 +214,9 @@ class HomeView extends GetView<HomeController> {
                       
                       // 8. Lainnya
                       _buildMenuItem(
-                        icon: Icons.more_horiz,
-                        title: 'Lainnya',
-                        color: Colors.grey,
+                        icon: Icons.bar_chart,
+                        title: 'Kondisi Aset',
+                        color: const Color(0xFF12B1B9),
                         onTap: () {
                           _showMoreOptionsBottomSheet(context);
                         },
@@ -246,7 +246,7 @@ class HomeView extends GetView<HomeController> {
                 child: Row(
                   children: [
                     Image.asset(
-                      'assets/images/logo.png',
+                      'assets/images/manajemen.png',
                       width: 80,
                       height: 80,
                       errorBuilder: (context, error, stackTrace) {
@@ -289,17 +289,17 @@ class HomeView extends GetView<HomeController> {
         ),
       ),
       // Floating Action Button untuk akses cepat ke scanner
-      // floatingActionButton: FloatingActionButton(
-      //   backgroundColor: const Color(0xFF12B1B9),
-      //   child: const Icon(
-      //     Icons.qr_code_scanner,
-      //     color: Colors.white,
-      //   ),
-      //   onPressed: () {
-      //     // Navigasi ke halaman QR scanner
-      //     Get.toNamed('/qr-scanner');
-      //   },
-      // ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: const Color(0xFF12B1B9),
+        child: const Icon(
+          Icons.qr_code_scanner,
+          color: Colors.white,
+        ),
+        onPressed: () {
+          // Navigasi ke halaman QR scanner
+          Get.toNamed('/qr-scanner');
+        },
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
@@ -311,10 +311,10 @@ class HomeView extends GetView<HomeController> {
             icon: Icon(Icons.home),
             label: 'Beranda',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.history),
-            label: 'Histori',
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.history),
+          //   label: 'Histori',
+          // ),
           // Memberikan ruang untuk FAB
           // BottomNavigationBarItem(
           //   icon: Icon(Icons.qr_code_scanner, color: Colors.transparent),
@@ -419,15 +419,15 @@ class HomeView extends GetView<HomeController> {
                   // ),
                   
                   // Galeri QR Code - Menu baru untuk melihat QR code yang sudah dibuat
-                  _buildMenuItem(
-                    icon: Icons.photo_library,
-                    title: 'Galeri QR',
-                    color: Colors.purple,
-                    onTap: () {
-                      Get.back(); // Tutup bottom sheet
-                      Get.toNamed('/qr-gallery');
-                    },
-                  ),
+                  // _buildMenuItem(
+                  //   icon: Icons.photo_library,
+                  //   title: 'Galeri QR',
+                  //   color: Colors.purple,
+                  //   onTap: () {
+                  //     Get.back(); // Tutup bottom sheet
+                  //     Get.toNamed('/qr-gallery');
+                  //   },
+                  // ),
                   
                   // Notifikasi
                   // _buildMenuItem(

@@ -123,8 +123,8 @@ class AssetDetailView extends GetView<AssetDetailController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _buildDetailCard(asset),
-              const SizedBox(height: 20),
-              _buildActionButtons(controller, context),
+              // const SizedBox(height: 20),
+              // _buildActionButtons(controller, context),
             ],
           ),
         );
@@ -375,36 +375,36 @@ class AssetDetailView extends GetView<AssetDetailController> {
     );
   }
 
-  Widget _buildActionButtons(AssetDetailController controller, BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Expanded(
-          child: ElevatedButton.icon(
-            icon: const Icon(Icons.edit),
-            label: const Text('Edit'),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF12B1B9),
-              padding: const EdgeInsets.symmetric(vertical: 12),
-            ),
-            onPressed: () => controller.editAsset(),
-          ),
-        ),
-        const SizedBox(width: 16),
-        Expanded(
-          child: ElevatedButton.icon(
-            icon: const Icon(Icons.delete),
-            label: const Text('Hapus'),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.red,
-              padding: const EdgeInsets.symmetric(vertical: 12),
-            ),
-            onPressed: () => controller.confirmDeleteAsset(),
-          ),
-        ),
-      ],
-    );
-  }
+  // Widget _buildActionButtons(AssetDetailController controller, BuildContext context) {
+  //   return Row(
+  //     mainAxisAlignment: MainAxisAlignment.center,
+  //     children: [
+  //       Expanded(
+  //         child: ElevatedButton.icon(
+  //           icon: const Icon(Icons.edit),
+  //           label: const Text('Edit'),
+  //           style: ElevatedButton.styleFrom(
+  //             backgroundColor: const Color(0xFF12B1B9),
+  //             padding: const EdgeInsets.symmetric(vertical: 12),
+  //           ),
+  //           onPressed: () => controller.editAsset(),
+  //         ),
+  //       ),
+  //       const SizedBox(width: 16),
+  //       Expanded(
+  //         child: ElevatedButton.icon(
+  //           icon: const Icon(Icons.delete),
+  //           label: const Text('Hapus'),
+  //           style: ElevatedButton.styleFrom(
+  //             backgroundColor: Colors.red,
+  //             padding: const EdgeInsets.symmetric(vertical: 12),
+  //           ),
+  //           onPressed: () => controller.confirmDeleteAsset()
+  //         ),
+  //       ),
+  //     ],
+  //   );
+  // }
   
   // Helper method to get icon based on category
   IconData _getCategoryIcon(String? category) {

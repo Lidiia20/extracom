@@ -67,6 +67,8 @@ dependencies:
   csv: ^6.0.0
   hive: ^2.2.3
   hive_flutter: ^1.1.0
+  barcode: ^2.2.9
+  uuid: ^4.5.1
 
 dev_dependencies:
   flutter_test:
@@ -91,6 +93,7 @@ flutter:
 
   assets:
     - assets/images/logo_pln.png
+    - assets/images/manajemen.png
 
   fonts:
     - family: Poppins

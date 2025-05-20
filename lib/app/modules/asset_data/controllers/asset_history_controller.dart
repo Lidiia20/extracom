@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import '../models/asset_history_model.dart';
 import '../services/asset_history_service.dart';
 
+
 class AssetHistoryController extends GetxController {
   // Instance service
   final AssetHistoryService _historyService = AssetHistoryService.to;

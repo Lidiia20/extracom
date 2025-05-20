@@ -1,0 +1,442 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.extracompln.xcompln"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="35" />
+10    <!--
+11         Required to query activities that can process text, see:
+12         https://developer.android.com/training/package-visibility and
+13         https://developer.android.com/reference/android/content/Intent#ACTION_PROCESS_TEXT.
+14
+15         In particular, this is used by the Flutter engine in io.flutter.plugin.text.ProcessTextPlugin.
+16    -->
+17    <queries>
+17-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:39:5-44:15
+18        <intent>
+18-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:40:9-43:18
+19            <action android:name="android.intent.action.PROCESS_TEXT" />
+19-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:41:13-72
+19-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:41:21-70
+20
+21            <data android:mimeType="text/plain" />
+21-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:42:13-50
+21-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:42:19-48
+22        </intent>
+23        <intent>
+23-->[:file_picker] C:\Users\Lidia\xcompln\build\file_picker\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-12:18
+24            <action android:name="android.intent.action.GET_CONTENT" />
+24-->[:file_picker] C:\Users\Lidia\xcompln\build\file_picker\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-72
+24-->[:file_picker] C:\Users\Lidia\xcompln\build\file_picker\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:21-69
+25
+26            <data android:mimeType="*/*" />
+26-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:42:13-50
+26-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:42:19-48
+27        </intent>
+28    </queries>
+29
+30    <uses-permission android:name="android.permission.CAMERA" />
+30-->[:mobile_scanner] C:\Users\Lidia\xcompln\build\mobile_scanner\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:5-65
+30-->[:mobile_scanner] C:\Users\Lidia\xcompln\build\mobile_scanner\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:7:22-62
+31
+32    <uses-feature
+32-->[:mobile_scanner] C:\Users\Lidia\xcompln\build\mobile_scanner\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:5-11:36
+33        android:name="android.hardware.camera"
+33-->[:mobile_scanner] C:\Users\Lidia\xcompln\build\mobile_scanner\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:9-47
+34        android:required="false" />
+34-->[:mobile_scanner] C:\Users\Lidia\xcompln\build\mobile_scanner\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:9-33
+35
+36    <permission
+36-->[androidx.core:core:1.15.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\0a69220afb472c7b014f0ae28962f998\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+37        android:name="com.extracompln.xcompln.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+37-->[androidx.core:core:1.15.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\0a69220afb472c7b014f0ae28962f998\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+38        android:protectionLevel="signature" />
+38-->[androidx.core:core:1.15.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\0a69220afb472c7b014f0ae28962f998\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+39
+40    <uses-permission android:name="com.extracompln.xcompln.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+40-->[androidx.core:core:1.15.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\0a69220afb472c7b014f0ae28962f998\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+40-->[androidx.core:core:1.15.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\0a69220afb472c7b014f0ae28962f998\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+41    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+42    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+42-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\3fe589753a4aba9a36c72c795b877407\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:5-79
+42-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\3fe589753a4aba9a36c72c795b877407\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:25:22-76
+43    <uses-permission android:name="android.permission.INTERNET" />
+43-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\3fe589753a4aba9a36c72c795b877407\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:26:5-67
+43-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\3fe589753a4aba9a36c72c795b877407\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:26:22-64
+44
+45    <application
+46        android:name="android.app.Application"
+46-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:4:9-42
+47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+47-->[androidx.core:core:1.15.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\0a69220afb472c7b014f0ae28962f998\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+48        android:extractNativeLibs="true"
+49        android:icon="@mipmap/ic_launcher"
+49-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:5:9-43
+50        android:label="xcompln" >
+50-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:3:9-32
+51        <activity
+51-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:6:9-27:20
+52            android:name="com.extracompln.xcompln.MainActivity"
+52-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:7:13-41
+53            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+53-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:12:13-163
+54            android:exported="true"
+54-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:8:13-36
+55            android:hardwareAccelerated="true"
+55-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:13:13-47
+56            android:launchMode="singleTop"
+56-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:9:13-43
+57            android:taskAffinity=""
+57-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:10:13-36
+58            android:theme="@style/LaunchTheme"
+58-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:11:13-47
+59            android:windowSoftInputMode="adjustResize" >
+59-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:14:13-55
+60
+61            <!--
+62                 Specifies an Android theme to apply to this Activity as soon as
+63                 the Android process has started. This theme is visible to the user
+64                 while the Flutter UI initializes. After that, this theme continues
+65                 to determine the Window background behind the Flutter UI.
+66            -->
+67            <meta-data
+67-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:19:13-22:17
+68                android:name="io.flutter.embedding.android.NormalTheme"
+68-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:20:15-70
+69                android:resource="@style/NormalTheme" />
+69-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:21:15-52
+70
+71            <intent-filter>
+71-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:23:13-26:29
+72                <action android:name="android.intent.action.MAIN" />
+72-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:24:17-68
+72-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:24:25-66
+73
+74                <category android:name="android.intent.category.LAUNCHER" />
+74-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:25:17-76
+74-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:25:27-74
+75            </intent-filter>
+76        </activity>
+77        <!--
+78             Don't delete the meta-data below.
+79             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+80        -->
+81        <meta-data
+81-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:30:9-32:33
+82            android:name="flutterEmbedding"
+82-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:31:13-44
+83            android:value="2" />
+83-->C:\Users\Lidia\xcompln\android\app\src\main\AndroidManifest.xml:32:13-30
+84        <!--
+85        Service for holding metadata. Cannot be instantiated.
+86        Metadata will be merged from other manifests.
+87        -->
+88        <service
+88-->[androidx.camera:camera-core:1.4.2] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\c2d60658e698800f39a450608b313ec7\transformed\jetified-camera-core-1.4.2\AndroidManifest.xml:29:9-33:78
+89            android:name="androidx.camera.core.impl.MetadataHolderService"
+89-->[androidx.camera:camera-core:1.4.2] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\c2d60658e698800f39a450608b313ec7\transformed\jetified-camera-core-1.4.2\AndroidManifest.xml:30:13-75
+90            android:enabled="false"
+90-->[androidx.camera:camera-core:1.4.2] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\c2d60658e698800f39a450608b313ec7\transformed\jetified-camera-core-1.4.2\AndroidManifest.xml:31:13-36
+91            android:exported="false" >
+91-->[androidx.camera:camera-core:1.4.2] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\c2d60658e698800f39a450608b313ec7\transformed\jetified-camera-core-1.4.2\AndroidManifest.xml:32:13-37
+92            <meta-data
+92-->[androidx.camera:camera-camera2:1.4.2] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\f811f807f7b17e979bbe8ae3001ddc19\transformed\jetified-camera-camera2-1.4.2\AndroidManifest.xml:30:13-32:89
+93                android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER"
+93-->[androidx.camera:camera-camera2:1.4.2] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\f811f807f7b17e979bbe8ae3001ddc19\transformed\jetified-camera-camera2-1.4.2\AndroidManifest.xml:31:17-103
+94                android:value="androidx.camera.camera2.Camera2Config$DefaultProvider" />
+94-->[androidx.camera:camera-camera2:1.4.2] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\f811f807f7b17e979bbe8ae3001ddc19\transformed\jetified-camera-camera2-1.4.2\AndroidManifest.xml:32:17-86
+95        </service>
+96
+97        <provider
+97-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:9-17:20
+98            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+98-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-82
+99            android:authorities="com.extracompln.xcompln.flutter.image_provider"
+99-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-74
+100            android:exported="false"
+100-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:13-37
+101            android:grantUriPermissions="true" >
+101-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:13-47
+102            <meta-data
+102-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-16:75
+103                android:name="android.support.FILE_PROVIDER_PATHS"
+103-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:17-67
+104                android:resource="@xml/flutter_image_picker_file_paths" />
+104-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:17-72
+105        </provider> <!-- Trigger Google Play services to install the backported photo picker module. -->
+106        <service
+106-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:19:9-31:19
+107            android:name="com.google.android.gms.metadata.ModuleDependencies"
+107-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:20:13-78
+108            android:enabled="false"
+108-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:21:13-36
+109            android:exported="false" >
+109-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:22:13-37
+110            <intent-filter>
+110-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:24:13-26:29
+111                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+111-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:17-94
+111-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:25:25-91
+112            </intent-filter>
+113
+114            <meta-data
+114-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:28:13-30:36
+115                android:name="photopicker_activity:0:required"
+115-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:29:17-63
+116                android:value="" />
+116-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:17-33
+117        </service>
+118
+119        <provider
+119-->[:open_file_android] C:\Users\Lidia\xcompln\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:9-19:20
+120            android:name="com.crazecoder.openfile.FileProvider"
+120-->[:open_file_android] C:\Users\Lidia\xcompln\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-64
+121            android:authorities="com.extracompln.xcompln.fileProvider.com.crazecoder.openfile"
+121-->[:open_file_android] C:\Users\Lidia\xcompln\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-88
+122            android:exported="false"
+122-->[:open_file_android] C:\Users\Lidia\xcompln\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:13-37
+123            android:grantUriPermissions="true"
+123-->[:open_file_android] C:\Users\Lidia\xcompln\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:13-47
+124            android:requestLegacyExternalStorage="true" >
+124-->[:open_file_android] C:\Users\Lidia\xcompln\build\open_file_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-56
+125            <meta-data
+125-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-16:75
+126                android:name="android.support.FILE_PROVIDER_PATHS"
+126-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:17-67
+127                android:resource="@xml/filepaths" />
+127-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:17-72
+128        </provider>
+129        <provider
+129-->[:printing] C:\Users\Lidia\xcompln\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-16:20
+130            android:name="net.nfet.flutter.printing.PrintFileProvider"
+130-->[:printing] C:\Users\Lidia\xcompln\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-71
+131            android:authorities="com.extracompln.xcompln.flutter.printing"
+131-->[:printing] C:\Users\Lidia\xcompln\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-68
+132            android:exported="false"
+132-->[:printing] C:\Users\Lidia\xcompln\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-37
+133            android:grantUriPermissions="true" >
+133-->[:printing] C:\Users\Lidia\xcompln\build\printing\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:12:13-47
+134            <meta-data
+134-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-16:75
+135                android:name="android.support.FILE_PROVIDER_PATHS"
+135-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:17-67
+136                android:resource="@xml/flutter_printing_file_paths" />
+136-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:17-72
+137        </provider>
+138        <!--
+139           Declares a provider which allows us to store files to share in
+140           '.../caches/share_plus' and grant the receiving action access
+141        -->
+142        <provider
+142-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:13:9-21:20
+143            android:name="dev.fluttercommunity.plus.share.ShareFileProvider"
+143-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-77
+144            android:authorities="com.extracompln.xcompln.flutter.share_provider"
+144-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:13-74
+145            android:exported="false"
+145-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:13-37
+146            android:grantUriPermissions="true" >
+146-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:17:13-47
+147            <meta-data
+147-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:14:13-16:75
+148                android:name="android.support.FILE_PROVIDER_PATHS"
+148-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:15:17-67
+149                android:resource="@xml/flutter_share_file_paths" />
+149-->[:image_picker_android] C:\Users\Lidia\xcompln\build\image_picker_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:16:17-72
+150        </provider>
+151        <!--
+152           This manifest declared broadcast receiver allows us to use an explicit
+153           Intent when creating a PendingItent to be informed of the user's choice
+154        -->
+155        <receiver
+155-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:26:9-32:20
+156            android:name="dev.fluttercommunity.plus.share.SharePlusPendingIntent"
+156-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:27:13-82
+157            android:exported="false" >
+157-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:28:13-37
+158            <intent-filter>
+158-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:29:13-31:29
+159                <action android:name="EXTRA_CHOSEN_COMPONENT" />
+159-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:17-65
+159-->[:share_plus] C:\Users\Lidia\xcompln\build\share_plus\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:30:25-62
+160            </intent-filter>
+161        </receiver>
+162
+163        <activity
+163-->[:url_launcher_android] C:\Users\Lidia\xcompln\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:8:9-11:74
+164            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+164-->[:url_launcher_android] C:\Users\Lidia\xcompln\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:9:13-74
+165            android:exported="false"
+165-->[:url_launcher_android] C:\Users\Lidia\xcompln\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:10:13-37
+166            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+166-->[:url_launcher_android] C:\Users\Lidia\xcompln\build\url_launcher_android\intermediates\merged_manifest\release\processReleaseManifest\AndroidManifest.xml:11:13-71
+167
+168        <service
+168-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\4db834ce90fc25246276ee7f2b3a26de\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.1\AndroidManifest.xml:9:9-15:19
+169            android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService"
+169-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\4db834ce90fc25246276ee7f2b3a26de\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.1\AndroidManifest.xml:10:13-91
+170            android:directBootAware="true"
+170-->[com.google.mlkit:common:18.11.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\eb2477fd659c6578bc869f4d6edf4d2b\transformed\jetified-common-18.11.0\AndroidManifest.xml:17:13-43
+171            android:exported="false" >
+171-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\4db834ce90fc25246276ee7f2b3a26de\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.1\AndroidManifest.xml:11:13-37
+172            <meta-data
+172-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\4db834ce90fc25246276ee7f2b3a26de\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.1\AndroidManifest.xml:12:13-14:85
+173                android:name="com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar"
+173-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\4db834ce90fc25246276ee7f2b3a26de\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.1\AndroidManifest.xml:13:17-120
+174                android:value="com.google.firebase.components.ComponentRegistrar" />
+174-->[com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\4db834ce90fc25246276ee7f2b3a26de\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.1\AndroidManifest.xml:14:17-82
+175            <meta-data
+175-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\a05b5895d4441831cef9203768ec4801\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:12:13-14:85
+176                android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar"
+176-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\a05b5895d4441831cef9203768ec4801\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:13:17-124
+177                android:value="com.google.firebase.components.ComponentRegistrar" />
+177-->[com.google.mlkit:vision-common:17.3.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\a05b5895d4441831cef9203768ec4801\transformed\jetified-vision-common-17.3.0\AndroidManifest.xml:14:17-82
+178            <meta-data
+178-->[com.google.mlkit:common:18.11.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\eb2477fd659c6578bc869f4d6edf4d2b\transformed\jetified-common-18.11.0\AndroidManifest.xml:20:13-22:85
+179                android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar"
+179-->[com.google.mlkit:common:18.11.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\eb2477fd659c6578bc869f4d6edf4d2b\transformed\jetified-common-18.11.0\AndroidManifest.xml:21:17-120
+180                android:value="com.google.firebase.components.ComponentRegistrar" />
+180-->[com.google.mlkit:common:18.11.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\eb2477fd659c6578bc869f4d6edf4d2b\transformed\jetified-common-18.11.0\AndroidManifest.xml:22:17-82
+181        </service>
+182
+183        <provider
+183-->[com.google.mlkit:common:18.11.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\eb2477fd659c6578bc869f4d6edf4d2b\transformed\jetified-common-18.11.0\AndroidManifest.xml:9:9-13:38
+184            android:name="com.google.mlkit.common.internal.MlKitInitProvider"
+184-->[com.google.mlkit:common:18.11.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\eb2477fd659c6578bc869f4d6edf4d2b\transformed\jetified-common-18.11.0\AndroidManifest.xml:10:13-78
+185            android:authorities="com.extracompln.xcompln.mlkitinitprovider"
+185-->[com.google.mlkit:common:18.11.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\eb2477fd659c6578bc869f4d6edf4d2b\transformed\jetified-common-18.11.0\AndroidManifest.xml:11:13-69
+186            android:exported="false"
+186-->[com.google.mlkit:common:18.11.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\eb2477fd659c6578bc869f4d6edf4d2b\transformed\jetified-common-18.11.0\AndroidManifest.xml:12:13-37
+187            android:initOrder="99" />
+187-->[com.google.mlkit:common:18.11.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\eb2477fd659c6578bc869f4d6edf4d2b\transformed\jetified-common-18.11.0\AndroidManifest.xml:13:13-35
+188
+189        <activity
+189-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\f6fa56a75284f8e0ea5d27971291f441\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:9-173
+190            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+190-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\f6fa56a75284f8e0ea5d27971291f441\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:19-85
+191            android:exported="false"
+191-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\f6fa56a75284f8e0ea5d27971291f441\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:146-170
+192            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+192-->[com.google.android.gms:play-services-base:18.5.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\f6fa56a75284f8e0ea5d27971291f441\transformed\jetified-play-services-base-18.5.0\AndroidManifest.xml:5:86-145
+193
+194        <meta-data
+194-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5568a35fadd1ad6d1c703f16a16e5540\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:9-122
+195            android:name="com.google.android.gms.version"
+195-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5568a35fadd1ad6d1c703f16a16e5540\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:20-65
+196            android:value="@integer/google_play_services_version" />
+196-->[com.google.android.gms:play-services-basement:18.4.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5568a35fadd1ad6d1c703f16a16e5540\transformed\jetified-play-services-basement-18.4.0\AndroidManifest.xml:6:66-119
+197
+198        <provider
+198-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\d221757f531c672c2df2db4ebaa2cbf1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+199            android:name="androidx.startup.InitializationProvider"
+199-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\d221757f531c672c2df2db4ebaa2cbf1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+200            android:authorities="com.extracompln.xcompln.androidx-startup"
+200-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\d221757f531c672c2df2db4ebaa2cbf1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+201            android:exported="false" >
+201-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\d221757f531c672c2df2db4ebaa2cbf1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+202            <meta-data
+202-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\d221757f531c672c2df2db4ebaa2cbf1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+203                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+203-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\d221757f531c672c2df2db4ebaa2cbf1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+204                android:value="androidx.startup" />
+204-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\d221757f531c672c2df2db4ebaa2cbf1\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+205            <meta-data
+205-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\9a58102024d2bac5d1ee1e1203812678\transformed\jetified-lifecycle-process-2.8.7\AndroidManifest.xml:29:13-31:52
+206                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+206-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\9a58102024d2bac5d1ee1e1203812678\transformed\jetified-lifecycle-process-2.8.7\AndroidManifest.xml:30:17-78
+207                android:value="androidx.startup" />
+207-->[androidx.lifecycle:lifecycle-process:2.8.7] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\9a58102024d2bac5d1ee1e1203812678\transformed\jetified-lifecycle-process-2.8.7\AndroidManifest.xml:31:17-49
+208            <meta-data
+208-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+209                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+209-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+210                android:value="androidx.startup" />
+210-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+211        </provider>
+212
+213        <uses-library
+213-->[androidx.window:window:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5093ab42d2307deb2d7ac0b7f5718c38\transformed\jetified-window-1.2.0\AndroidManifest.xml:23:9-25:40
+214            android:name="androidx.window.extensions"
+214-->[androidx.window:window:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5093ab42d2307deb2d7ac0b7f5718c38\transformed\jetified-window-1.2.0\AndroidManifest.xml:24:13-54
+215            android:required="false" />
+215-->[androidx.window:window:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5093ab42d2307deb2d7ac0b7f5718c38\transformed\jetified-window-1.2.0\AndroidManifest.xml:25:13-37
+216        <uses-library
+216-->[androidx.window:window:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5093ab42d2307deb2d7ac0b7f5718c38\transformed\jetified-window-1.2.0\AndroidManifest.xml:26:9-28:40
+217            android:name="androidx.window.sidecar"
+217-->[androidx.window:window:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5093ab42d2307deb2d7ac0b7f5718c38\transformed\jetified-window-1.2.0\AndroidManifest.xml:27:13-51
+218            android:required="false" />
+218-->[androidx.window:window:1.2.0] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5093ab42d2307deb2d7ac0b7f5718c38\transformed\jetified-window-1.2.0\AndroidManifest.xml:28:13-37
+219
+220        <receiver
+220-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+221            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+221-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+222            android:directBootAware="false"
+222-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+223            android:enabled="true"
+223-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+224            android:exported="true"
+224-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+225            android:permission="android.permission.DUMP" >
+225-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+226            <intent-filter>
+226-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+227                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+227-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+227-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+228            </intent-filter>
+229            <intent-filter>
+229-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+230                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+230-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+230-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+231            </intent-filter>
+232            <intent-filter>
+232-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+233                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+233-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+233-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+234            </intent-filter>
+235            <intent-filter>
+235-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+236                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+236-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+236-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\5f7dcf6815bacc3ae7f099ba801348de\transformed\jetified-profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+237            </intent-filter>
+238        </receiver>
+239
+240        <service
+240-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\3fe589753a4aba9a36c72c795b877407\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:29:9-35:19
+241            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+241-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\3fe589753a4aba9a36c72c795b877407\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:30:13-103
+242            android:exported="false" >
+242-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\3fe589753a4aba9a36c72c795b877407\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:31:13-37
+243            <meta-data
+243-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\3fe589753a4aba9a36c72c795b877407\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:32:13-34:39
+244                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+244-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\3fe589753a4aba9a36c72c795b877407\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:33:17-94
+245                android:value="cct" />
+245-->[com.google.android.datatransport:transport-backend-cct:2.3.3] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\3fe589753a4aba9a36c72c795b877407\transformed\jetified-transport-backend-cct-2.3.3\AndroidManifest.xml:34:17-36
+246        </service>
+247        <service
+247-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\9fb76887d9728a5f4c19fa6f805116ec\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:26:9-30:19
+248            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+248-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\9fb76887d9728a5f4c19fa6f805116ec\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:27:13-117
+249            android:exported="false"
+249-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\9fb76887d9728a5f4c19fa6f805116ec\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:28:13-37
+250            android:permission="android.permission.BIND_JOB_SERVICE" >
+250-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\9fb76887d9728a5f4c19fa6f805116ec\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:29:13-69
+251        </service>
+252
+253        <receiver
+253-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\9fb76887d9728a5f4c19fa6f805116ec\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:32:9-34:40
+254            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+254-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\9fb76887d9728a5f4c19fa6f805116ec\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:33:13-132
+255            android:exported="false" />
+255-->[com.google.android.datatransport:transport-runtime:2.2.6] C:\Users\Lidia\.gradle\caches\8.10.2\transforms\9fb76887d9728a5f4c19fa6f805116ec\transformed\jetified-transport-runtime-2.2.6\AndroidManifest.xml:34:13-37
+256    </application>
+257
+258</manifest>

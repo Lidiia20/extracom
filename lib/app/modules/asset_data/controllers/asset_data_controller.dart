@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:logger/logger.dart';
+import 'package:qr_flutter/qr_flutter.dart'; // Add QR code package
 import '../models/asset_model.dart';
 import '../services/asset_service.dart';
 import '../providers/asset_api_provider.dart';
+import '../views/qr_display_view.dart'; // Import QR display view
 
 class AssetDataController extends GetxController {
   // Services & Providers
@@ -117,6 +119,39 @@ class AssetDataController extends GetxController {
     searchController.clear();
     searchQuery.value = '';
     await loadAssets();
+  }
+  
+  // Add method to handle new asset creation with QR code generation
+  void onAssetCreated(Asset newAsset) {
+    logger.i('New asset created: ${newAsset.namaBarang}');
+    
+    // Generate QR code data - use the most unique identifier available
+    final String qrData = _generateQRData(newAsset);
+    
+    // Navigate to QR display view with the new asset and QR data
+    Get.to(() => QRDisplayView(asset: newAsset, qrData: qrData));
+  }
+  
+  // Helper method to generate QR code data based on asset properties
+  String _generateQRData(Asset asset) {
+    // Prioritize identifiers: noInventarisBarang, serialNumber, or constructed ID
+    final String assetId = asset.noInventarisBarang ?? 
+                          asset.serialNumber ?? 
+                          'ASSET-${asset.no ?? asset.id ?? DateTime.now().millisecondsSinceEpoch}';
+    
+    // Create a map of essential asset information
+    final Map<String, dynamic> qrMap = {
+      'id': assetId,
+      'name': asset.namaBarang ?? 'Unknown Asset',
+      'merk': asset.merk ?? '-',
+      'type': asset.type ?? '-',
+      'user': asset.namaPengguna ?? '-',
+      'location': asset.namaRuangan ?? '-',
+      'bidang': asset.bidang ?? '-',
+    };
+    
+    // Convert map to JSON string for QR code
+    return qrMap.toString();
   }
   
   Future<bool> deleteAsset(Asset asset) async {

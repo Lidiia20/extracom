@@ -26,8 +26,6 @@ import '../modules/nota/bindings/nota_binding.dart';
 import '../modules/nota/views/asset_nota_view.dart';
 import '../modules/nota/views/nota_view.dart';
 import '../modules/asset_report/views/asset_report_full_list_view.dart';
-import '../modules/asset_data/views/qr_gallery_view.dart';
-
 
 // lib/app/routes/app_pages.dart
 
@@ -131,10 +129,7 @@ class AppPages {
     page: () => const AssetReportFullListView(),
     binding: AssetReportBinding(),
   ),
-  GetPage(
-  name: '/qr_gallery',
-  page: () => const QrGalleryView(),
-),
+ 
 
   ];
 }

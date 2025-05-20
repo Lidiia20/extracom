@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../asset_data/services/dropdown_options_service.dart';
 import '../../asset_form/controllers/asset_form_controller.dart';
+import '../../asset_data/models/asset_model.dart';
+import '../../asset_data/services/asset_service.dart';
+import '../../asset_data/providers/asset_api_provider.dart';
+
 
 class AssetFormView extends GetView<AssetFormController> {
   const AssetFormView({super.key});
@@ -126,7 +130,7 @@ class AssetFormView extends GetView<AssetFormController> {
       ];
       
       // Use the default options directly instead of trying to filter invalid options
-      final List<String> options = defaultOptions;
+      final List<String> options = controller.safeBidangOptions;
 
       // Set current value - IMPORTANT: DO NOT USE NULL as value
       final String currentValue = controller.bidangController.text.isNotEmpty 
@@ -144,7 +148,7 @@ class AssetFormView extends GetView<AssetFormController> {
 
       return DropdownButtonFormField<String>(
         isExpanded: true,
-        value: currentValue, // NEVER USE NULL HERE
+        value: options.contains(currentValue) ? currentValue : options.first, // NEVER USE NULL HERE
         decoration: InputDecoration(
           labelText: 'Bidang',
           border: OutlineInputBorder(
@@ -165,7 +169,8 @@ class AssetFormView extends GetView<AssetFormController> {
           if (newValue != null) {
             controller.currentBidang.value = newValue;
             controller.bidangController.text = newValue;
-            print('Bidang changed to: $newValue');
+            controller.selectedBidang.value = newValue;
+            // print('Bidang changed to: $newValue');
           }
         },
         validator: (value) {
